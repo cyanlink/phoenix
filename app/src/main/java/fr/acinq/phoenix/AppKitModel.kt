@@ -581,6 +581,8 @@ class AppKitModel : ViewModel() {
     checkConnectivity(context)
     cancelBackgroundJobs(context)
 
+    fr.acinq.phoenix.services.TorBackgroundService.startActionFoo(context)
+
     val mnemonics = String(Hex.decode(EncryptedSeed.readSeedFile(context, pin)), Charsets.UTF_8)
     log.info("seed successfully read")
     val seed = `ByteVector$`.`MODULE$`.apply(MnemonicCode.toSeed(mnemonics, "").toArray())
