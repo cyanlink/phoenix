@@ -153,9 +153,11 @@ dependencies {
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
   // tor
-  implementation 'com.msopentech.thali:universal:0.0.3'
-  implementation 'org.torproject:tor-android-binary:0.4.1.5'
-  implementation 'com.msopentech.thali.toronionproxy.android:android:0.0.3@aar'
-  implementation 'com.msopentech.thali.toronionproxy.android:tor-installer:0.0.3@aar'
-  implementation 'net.freehaven.tor.control:jtorctl:0.2'
+  def tor_version = "0.4.1.5"
+  def tor_wrapper_version = "0.0.3"
+  implementation "com.msopentech.thali:universal:$tor_wrapper_version"
+  implementation "org.torproject:tor-android-binary:$tor_version"
+  implementation "com.msopentech.thali.toronionproxy.android:android:$tor_wrapper_version@aar"
+  implementation "com.msopentech.thali.toronionproxy.android:tor-installer:$tor_wrapper_version@aar"
+  implementation "net.freehaven.tor.control:jtorctl:0.2"
 }
